@@ -14,14 +14,16 @@ const animesReducer = (state = initialState, action) => {
         case SEARCH: {
             return {
                 ...state,
-                isLoading: true
+                isLoading: true,
+                error: null
             };
         }
 
         case SEARCH_MORE: {
             return {
                 ...state,
-                isLoadingMore: true
+                isLoadingMore: true,
+                error: null
             }
         }
 

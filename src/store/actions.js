@@ -37,8 +37,6 @@ export const searchMoreAction = (payload) => {
 
         const state = getState().animes;
 
-        console.log(state);
-
         return Axios.get(process.env.REACT_APP_API_URL, {
             params: {
                 q: payload,

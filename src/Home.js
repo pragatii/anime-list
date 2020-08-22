@@ -27,7 +27,9 @@ const Home = ({state, search, searchMore}) => {
             </header>
             <main>
                 {
-                    state.isLoading
+                    state.error
+                        ? 'Some error occurred, please try again.'
+                        : (state.isLoading
                         ? 'Loading...'
                         : <div className={'main-content'}>
                             <div className={'content'}>
@@ -46,7 +48,7 @@ const Home = ({state, search, searchMore}) => {
                                 &&
                                 <button className={'load-more'} onClick={e => searchMore(query)}>Load More</button>
                             }
-                        </div>
+                        </div>)
                 }
             </main>
         </div>
